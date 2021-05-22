@@ -1,0 +1,25 @@
+		*სტანდარტული მოთხოვნა(Object Version)*
+
+$query = $db->query('SELECT name, title, email FROM my_table');
+$results = $query->getResult();
+
+foreach ($results as $row)
+{
+    echo $row->title;
+    echo $row->name;
+    echo $row->email;
+}
+
+echo 'Total Results: ' . count($results);
+
+		*სტანდარტული მოთხოვნა(Array Version)*
+
+$query   = $db->query('SELECT name, title, email FROM my_table');
+$results = $query->getResultArray();
+
+foreach ($results as $row)
+{
+    echo $row['title'];
+    echo $row['name'];
+    echo $row['email'];
+}
